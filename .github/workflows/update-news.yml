@@ -10,19 +10,10 @@ on:
         required: false
         default: false
         type: boolean
-      force_tikhub:
-        required: false
-        default: false
-        type: boolean
   workflow_dispatch:
     inputs:
       force_x_api:
         description: "Force one paid X API refresh outside its normal time windows"
-        required: false
-        default: false
-        type: boolean
-      force_tikhub:
-        description: "Force a paid TikHub refresh even before its normal interval"
         required: false
         default: false
         type: boolean
@@ -76,7 +67,7 @@ jobs:
           AGENTMAIL_API_BASE_URL: ${{ vars.AGENTMAIL_API_BASE_URL }}
           AGENTMAIL_LIMIT: ${{ vars.AGENTMAIL_LIMIT }}
           AGENTMAIL_ALLOWED_SENDER_DOMAINS: ${{ vars.AGENTMAIL_ALLOWED_SENDER_DOMAINS }}
-          # Paid X/social sources (X API, SocialData, TikHub): keys live in
+          # Paid X/social sources (X API and SocialData): keys live in
           # secrets; optional tuning variables override code defaults.
           # Policy is key-first: a key present => the source runs; ENABLED is
           # optional and only needs setting to 0 to force it off.
@@ -103,17 +94,6 @@ jobs:
           SOCIALDATA_LIST_ENABLED: ${{ vars.SOCIALDATA_LIST_ENABLED }}
           SOCIALDATA_LIST_MAX_RESULTS: ${{ vars.SOCIALDATA_LIST_MAX_RESULTS }}
           SOCIALDATA_LIST_EXCLUDE: ${{ vars.SOCIALDATA_LIST_EXCLUDE }}
-          TIKHUB_ENABLED: ${{ secrets.TIKHUB_ENABLED || vars.TIKHUB_ENABLED }}
-          TIKHUB_API_KEY: ${{ secrets.TIKHUB_API_KEY }}
-          TIKHUB_API_BASE_URL: ${{ vars.TIKHUB_API_BASE_URL }}
-          TIKHUB_QUERY: ${{ vars.TIKHUB_QUERY }}
-          TIKHUB_PLATFORMS: ${{ vars.TIKHUB_PLATFORMS }}
-          TIKHUB_MAX_RESULTS: ${{ vars.TIKHUB_MAX_RESULTS }}
-          TIKHUB_DAILY_ITEM_LIMIT: ${{ vars.TIKHUB_DAILY_ITEM_LIMIT }}
-          TIKHUB_RUN_INTERVAL_HOURS: ${{ vars.TIKHUB_RUN_INTERVAL_HOURS }}
-          TIKHUB_RUN_UTC_HOUR: ${{ vars.TIKHUB_RUN_UTC_HOUR }}
-          TIKHUB_RUN_UTC_MINUTE_MAX: ${{ vars.TIKHUB_RUN_UTC_MINUTE_MAX }}
-          TIKHUB_FORCE_RUN: ${{ inputs.force_tikhub && '1' || '' }}
           RSS_MAX_FEEDS: ${{ vars.RSS_MAX_FEEDS || 10 }}
           OPML_ONLY: ${{ vars.OPML_ONLY || '0' }}
           # DeepSeek: powers title enhancement + zh translation fallback in
