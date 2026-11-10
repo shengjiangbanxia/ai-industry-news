@@ -104,7 +104,7 @@ SocialData 同时跑两路:① 中英关键词搜索发现新声音;② 一个�
 
 ## 7. X API(官方接口,默认未用)
 
-官方 X API 默认关闭(没配 `X_BEARER_TOKEN`)。参数:`X_API_DEFAULT_QUERY`(约 192 行)、`X_API_DEFAULT_MAX_RESULTS`(约 193 行)。个人部署使用 `X_API_RUN_UTC_HOURS=0`，每天北京时间 08:06 抓取一次；`X_API_RUN_UTC_MINUTE_MAX=30` 提供半小时触发窗口。
+官方 X API 默认关闭(没配 `X_BEARER_TOKEN`)。参数:`X_API_DEFAULT_QUERY`(约 192 行)、`X_API_DEFAULT_MAX_RESULTS`(约 193 行)。个人部署使用 `X_API_RUN_UTC_HOURS=21`，每天北京时间 05:06 抓取一次；`X_API_RUN_UTC_MINUTE_MAX=30` 提供半小时触发窗口。普通信源每天北京时间 05:06–23:06 每两小时更新一次。
 
 ---
 

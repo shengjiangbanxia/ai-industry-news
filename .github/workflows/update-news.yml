@@ -2,8 +2,9 @@ name: Update AI News Snapshot
 
 on:
   schedule:
-    # Run hourly at :06, shortly after each hour begins.
-    - cron: "6 * * * *"
+    # UTC 21:06, 23:06, and 01:06-15:06 every two hours correspond to
+    # 05:06-23:06 every two hours in Asia/Shanghai.
+    - cron: "6 1-15/2,21,23 * * *"
   workflow_call:
     inputs:
       force_x_api:
@@ -76,9 +77,9 @@ jobs:
           X_API_QUERY: ${{ vars.X_API_QUERY }}
           X_API_MAX_RESULTS: ${{ vars.X_API_MAX_RESULTS }}
           X_API_DAILY_POST_LIMIT: ${{ vars.X_API_DAILY_POST_LIMIT }}
-          # 00:00 UTC = 08:00 Asia/Shanghai. The hourly :06 workflow falls
-          # inside this single daily half-hour paid-read window.
-          X_API_RUN_UTC_HOURS: '0'
+          # 21:00 UTC = 05:00 Asia/Shanghai. The first scheduled run at 05:06
+          # performs the single daily paid X read.
+          X_API_RUN_UTC_HOURS: '21'
           X_API_RUN_UTC_MINUTE_MAX: 30
           X_API_FORCE_RUN: ${{ inputs.force_x_api && '1' || '' }}
           SOCIALDATA_ENABLED: ${{ secrets.SOCIALDATA_ENABLED || vars.SOCIALDATA_ENABLED }}
