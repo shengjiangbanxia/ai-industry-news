@@ -123,7 +123,7 @@ baseline, then let the aggregator layer add breadth.
   read quota. Use `X_API_MAX_RESULTS`, `X_API_DAILY_POST_LIMIT`, and
   `X_API_RUN_UTC_HOURS` to cap usage. The personal deployment uses one
   half-hour window at 00:00 UTC, corresponding to 08:00 in Asia/Shanghai;
-  the hourly workflow therefore performs the paid read at 08:23. Each request sends a 24-hour
+  the hourly workflow therefore performs the paid read at 08:06. Each request sends a 24-hour
   `start_time`, so the paid result cap is not filled with older posts.
 - **SocialData.tools X search**: supported as an advanced, secret-backed adapter
   through `SOCIALDATA_ENABLED=1` and `SOCIALDATA_API_KEY`, but disabled by

@@ -2,8 +2,8 @@ name: Update AI News Snapshot
 
 on:
   schedule:
-    # Run hourly at :23 to avoid the busiest top-of-hour queue.
-    - cron: "23 * * * *"
+    # Run hourly at :06, shortly after each hour begins.
+    - cron: "6 * * * *"
   workflow_call:
     inputs:
       force_x_api:
@@ -76,7 +76,7 @@ jobs:
           X_API_QUERY: ${{ vars.X_API_QUERY }}
           X_API_MAX_RESULTS: ${{ vars.X_API_MAX_RESULTS }}
           X_API_DAILY_POST_LIMIT: ${{ vars.X_API_DAILY_POST_LIMIT }}
-          # 00:00 UTC = 08:00 Asia/Shanghai. The hourly :23 workflow falls
+          # 00:00 UTC = 08:00 Asia/Shanghai. The hourly :06 workflow falls
           # inside this single daily half-hour paid-read window.
           X_API_RUN_UTC_HOURS: '0'
           X_API_RUN_UTC_MINUTE_MAX: 30
