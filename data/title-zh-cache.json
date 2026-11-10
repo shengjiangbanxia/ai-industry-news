@@ -30078,5 +30078,8 @@
   "summary_zh|Seagate takes on high SSD storage prices with the Firecuda Force, a 8TB or 20TB hard drive that requires you to bring your own M.2 2280 SSD (ideally 1TB, with DRAM). It's a throwback to the days of hybrid drives, and the experience is pretty seamless once you install your SSD. But if you don't already own an SSD that you can drop in, it's still quite expensive.": "希捷通过 Firecuda Force 应对高 SSD 存储价格，这是一款 8TB 或 20TB 硬盘，需要您自带 M.2 2280 SSD（最好是 1TB，带 DRAM）。这是对混合驱动器时代的回归，安装 SSD 后体验非常无缝。但如果您还没有可以使用的 SSD，那么它仍然相当昂贵。",
   "Seagate resurrects hybrid storage: Hands-on with the FireCuda Forge – 8 or 20TB external hard drive requires you to bring your own NVMe SSD": "希捷复活混合存储：亲身体验 FireCuda Forge – 8 或 20TB 外置硬盘需要您自带 NVMe SSD",
   "summary_zh|The FBI is probably concerned about the implication of a Chinese agent having influence over the leader of the U.S.'s leading AI chip manufacturer.": "FBI 可能担心一名中国特工对美国领先人工智能芯片制造商的领导人产生影响。",
-  "President Trump says the FBI is investigating Jensen Huang’s affair": "特朗普总统表示联邦调查局正在调查黄仁勋的婚外情"
+  "President Trump says the FBI is investigating Jensen Huang’s affair": "特朗普总统表示联邦调查局正在调查黄仁勋的婚外情",
+  "summary_zh|Linus Torvalds thinks that AI fixes drove most of the progress in Linux kernel 7.4rc2 — BPF saw more AI-written fixes than bug reports, possibly indicating a tidal shift": "Linus Torvalds 认为 AI 修复推动了 Linux 内核 7.4rc2 的大部分进展——BPF 看到的 AI 编写的修复多于错误报告，这可能表明了潮流的转变",
+  "Linus Torvalds says that AI fixes drove most of the progress in latest Linux kernel": "Linus Torvalds 表示 AI 修复推动了最新 Linux 内核的大部分进展",
+  "🚨 HBM5 Doubles Bandwidth Without Adding a Single Pin 🚨 HBM5 keeps the same 2048 pins as HBM4E and runs each one nearly 2× faster. Samsung's Hot Chips 2026 presentation shows pin speed going from 14 Gbps on HBM4E to over…": "🚨 HBM5 在不添加单个引脚的情况下使带宽加倍 🚨 HBM5 保留了与 HBM4E 相同的 2048 个引脚，并且每个引脚的运行速度几乎提高了 2 倍。三星的 Hot Chips 2026 演示显示 HBM4E 上的引脚速度从 14 Gbps 提高到超过……"
 }
