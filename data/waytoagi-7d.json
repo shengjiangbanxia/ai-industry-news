@@ -1,57 +1,27 @@
 {
-  "generated_at": "2026-11-18T04:12:18.476649Z",
+  "generated_at": "2026-11-18T16:23:45.901205Z",
   "timezone": "Asia/Shanghai",
   "root_url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview",
   "history_url": "https://waytoagi.feishu.cn/wiki/FjiOwWp2giA7hRk6jjfcPioCnAc",
   "window_days": 7,
-  "latest_date": "2026-11-17",
-  "count_today": 7,
+  "latest_date": "2026-11-18",
+  "count_today": 1,
   "updates_today": [
     {
-      "date": "2026-11-17",
-      "title": "用 DeepSeek Harness + REA 复刻一切 AI 产品！！",
-      "summary": "这篇实战分享带来一套低成本复刻AI短剧产品的工具链路，借助DeepSeek Harness、REA与Craft Anything，仅两天就完成前端、后端与短剧技能蒸馏。作者还拆解了三层复刻流程，适合想搭建短剧工作台的开发者参考避坑，看清这类逆向方案的真实上限与隐患。",
-      "url": "https://waytoagi.feishu.cn/wiki/YDd7wYXLCiuJXQkMS94cuBjZnif?from=from_copylink"
-    },
-    {
-      "date": "2026-11-17",
-      "title": "星尘简史 · 创作过程教程",
-      "summary": "作者完整还原了交互式 3D 宇宙短片的打造思路。作者用 16 万颗粒子串联 138 亿年时光，依托 Aholo Lux3D 实现星尘汇聚成万物的惊艳效果。文中给出了可直接复用的代码、脚本、参数和踩坑记录，覆盖粒子引擎、模型瘦身、音频联动、网页部署全链路。不管是想要复刻同款粒子叙事，还是学习 Three.js + 文生 3D 的创意落地，都有极高参考价值。",
-      "url": "https://waytoagi.feishu.cn/wiki/Rjvfwf3I4iG7UskUmNqcDqQEncf?from=from_copylink"
-    },
-    {
-      "date": "2026-11-17",
-      "title": "收藏夹吃灰几千篇后，我建立了一套自动跑的APQR 知识管理方法",
-      "summary": "厌倦收藏夹堆积、信息被动投喂？作者改造了经典的PARA知识管理体系，推出适配Agent的APQR方法。以每月一个核心问题为锚点，借助豆包工作搭建自动化信息流，定向抓取一手素材、搭配对立视角，拒绝无效热点。而且还给出了可直接复用的提示词与Skill，帮你把信息筛选交给AI，打造专属个人学习流。",
-      "url": "https://waytoagi.feishu.cn/wiki/HZJkwHfFiijV12kj8SecdrkVnzg?from=from_copylink"
-    },
-    {
-      "date": "2026-11-17",
-      "title": "仅用两段话，我让AI完成一个让我热泪盈眶的AI游戏！",
-      "summary": "作者分享了用GPT快速搭建抗战悬疑互动AVG《第七个哨兵》的完整实战。来一起看看怎么仅用两段话，让AI完成一个让人热泪盈眶的AI游戏！",
-      "url": "https://waytoagi.feishu.cn/wiki/AU2XwMbO0ivZx0kafGDcj6zsnpf"
-    },
-    {
-      "date": "2026-11-17",
-      "title": "Meta 产品副总裁复盘 Muse 如何从周末原型做到 App Store 榜首丨Lenny's Podcast",
-      "summary": "一个周末就能跑通的 AI 助手，为什么还要花七个月才能上线？Meta 产品副总裁复盘了 Muse 的开发过程，把原型背后的难题摊开讲了一下：隐私怎样保护、任务如何验收、用户为什么连第一句指令都不知道怎么写。",
-      "url": "https://waytoagi.feishu.cn/wiki/D4Xuw5XXOiavBgk4NcGcgGb3nRc?from=from_copylink"
-    },
-    {
-      "date": "2026-11-17",
-      "title": "Claude Code 团队如何思考验证",
-      "summary": "Anthropic 公开了 Claude Code 团队的核心工程经验：验证循环是大规模并行跑编码智能体的基石。这套方案能让智能体自主查漏、迭代修复，帮开发者从逐行审代码转向定义验收标准，释放多Agent并发开发的潜力。",
-      "url": "https://waytoagi.feishu.cn/wiki/So3LwYIdPivkcqkVcl5c40drnwf?from=from_copylink"
-    },
-    {
-      "date": "2026-11-17",
-      "title": "AIE上海幕后：50多位嘉宾、千人大会，小团队如何无感用AI接住几十轮改动？",
-      "summary": "想给团队引入AI又不愿重构现有工作流，这篇AIE上海大会的复盘很有参考意义。团队保留微信、Notion的原有协作习惯，用Agent承接官网、议程、海报等多物料同步更新，攻克跨版本交接易错的难题，给小团队轻量AI提效提供可复用的思路。",
-      "url": "https://waytoagi.feishu.cn/wiki/Arr7wyt7fiJpzZkZjt3cv2FNnPb?from=from_copylink"
+      "date": "2026-11-18",
+      "title": "《Kling Image 4.0使用指南 》Kling Image 4.0 在画面真实感、文字表现力、指令理解与一致性上实现显著提升，让光影质感更自然、图文设计更出彩、复杂构想更准确地呈现。同时，原生 8K 超高清画质带来丰富细节，连贯组图支持一次描述展开成套创作，为单张画面的精细表达与成套内容的高效创作提供更完整的支持。快来试试效果如何！",
+      "summary": "《Kling Image 4.0使用指南 》Kling Image 4.0 在画面真实感、文字表现力、指令理解与一致性上实现显著提升，让光影质感更自然、图文设计更出彩、复杂构想更准确地呈现。同时，原生 8K 超高清画质带来丰富细节，连贯组图支持一次描述展开成套创作，为单张画面的精细表达与成套内容的高效创作提供更完整的支持。快来试试效果如何！",
+      "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
     }
   ],
-  "count_7d": 38,
+  "count_7d": 32,
   "updates_7d": [
+    {
+      "date": "2026-11-18",
+      "title": "《Kling Image 4.0使用指南 》Kling Image 4.0 在画面真实感、文字表现力、指令理解与一致性上实现显著提升，让光影质感更自然、图文设计更出彩、复杂构想更准确地呈现。同时，原生 8K 超高清画质带来丰富细节，连贯组图支持一次描述展开成套创作，为单张画面的精细表达与成套内容的高效创作提供更完整的支持。快来试试效果如何！",
+      "summary": "《Kling Image 4.0使用指南 》Kling Image 4.0 在画面真实感、文字表现力、指令理解与一致性上实现显著提升，让光影质感更自然、图文设计更出彩、复杂构想更准确地呈现。同时，原生 8K 超高清画质带来丰富细节，连贯组图支持一次描述展开成套创作，为单张画面的精细表达与成套内容的高效创作提供更完整的支持。快来试试效果如何！",
+      "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
+    },
     {
       "date": "2026-11-17",
       "title": "用 DeepSeek Harness + REA 复刻一切 AI 产品！！",
@@ -237,48 +207,6 @@
       "title": "Next Token 的 30 条 AI 领域的核心认知",
       "summary": "这篇集结了Next Token多期沉淀的AI认知金句，围绕Token经济学、AI原生产品、Agent架构、个人品牌与组织转型展开。或许你也能从中获得审视AI生意与创作路径的新思路。",
       "url": "https://waytoagi.feishu.cn/wiki/UohZwna8mi6ljYk64tBcKRmunhe?from=from_copylink"
-    },
-    {
-      "date": "2026-11-12",
-      "title": "怎么好好的AI，到我手里就不好用了？",
-      "summary": "为什么别人用 AI 很顺手，轮到自己却越用越费劲？梦飞用 WorkBuddy 演示了一条对于小白而言更容易上手的路：挑一件自己熟悉的小事，说清目标、范围和不能改的地方，只给相关材料；看到第一版结果后，再具体指出哪里要调整。如果你也总觉得 AI“不懂我”，可以跟着做一次。先让它帮你完成一件小事，后面才更容易用起来。",
-      "url": "https://waytoagi.feishu.cn/wiki/LMgYwjjwuijhSRkrsXJccID0n6N?from=from_copylink"
-    },
-    {
-      "date": "2026-11-12",
-      "title": "如何在5分钟之内创建Grok Bot的超级团队",
-      "summary": "最近Grok Bot挺火，老金以前也推过。这篇文章就来给大家从怎么安装，到怎么使用，以及怎么接入你其他的模型订阅，最后还讲解了和其他如Dot和Muse的区别都是啥。",
-      "url": "https://waytoagi.feishu.cn/wiki/Tx1rwSAcTiPYgWkIIiHcwgW2nEc?from=from_copylink"
-    },
-    {
-      "date": "2026-11-12",
-      "title": "如何从老需求出发，找 AI 新词？",
-      "summary": "想做 AI 工具，又不知道“做什么有人用”？可以先翻翻用户早就在搜的老需求。作者以字体生成器为例，演示了如何用 Ahrefs 找出生成、编辑、转换等需求，再查看加上 AI 后的搜索趋势，顺着关键词就能找到近期流量上涨的对标产品。",
-      "url": "https://waytoagi.feishu.cn/wiki/AhpHwhwOgi6lhVkFBPDcr8wAnGd?from=from_copylink"
-    },
-    {
-      "date": "2026-11-12",
-      "title": "万字长文｜DeepSeek Harness 完全指南，打造你的专属工作台",
-      "summary": "装好 DeepSeek Harness 后却卡在一众插件前：该装哪个？装完去哪找？这篇文章从桌面端安装讲起，把 7 款工作台按上手难度分好类，覆盖自媒体排版、产品原型、小游戏等场景，或许可以帮你快速找到最适合你的插件。",
-      "url": "https://waytoagi.feishu.cn/wiki/Ous6wVjvSizC2FkbWn0chTgRnAc?from=from_copylink"
-    },
-    {
-      "date": "2026-11-12",
-      "title": "一个人指挥一支 AI 剧组：Gemini 4 + Omni 1.2 剧情短片制作保姆级教程",
-      "summary": "AI 视频最怕镜头单看都不错，拼起来却人物变脸、台词吞字、字幕乱跑。作者用 Gemini 4 搭配 Omni 1.2，把一个西游记喜剧点子做成完整短片，也把从剧本、分镜到生成、配音、后期的七步流程摊开了。",
-      "url": "https://waytoagi.feishu.cn/wiki/SpM0wegdciFmDnk5QuxcSxpznOd?from=from_copylink"
-    },
-    {
-      "date": "2026-11-12",
-      "title": "MUSE新手进阶，搭建全自动工作流",
-      "summary": "和 AI 聊出的好点子，过几天就被埋在对话记录里；想接着做，又得从头交代。Muse 的 Spaces 可以把长期任务留成一个随时能打开的工作台。作者搭了免费额度雷达、AI 视频工作流、自媒体创作中心和热点看板，带你用真实素材做出第一版。",
-      "url": "https://waytoagi.feishu.cn/wiki/Q6JFwV4PHiqLWTkSgvicwjx5nmh?from=from_copylink"
-    },
-    {
-      "date": "2026-11-12",
-      "title": "AI 产品经理技术能力指南：从 GPU 到 Agent（附学习指南）",
-      "summary": "对于想转型 AI 的产品经理来说，面对从 GPU 到 Agent 的庞大技术体系，究竟应该学什么、学到什么程度？又该怎样把技术知识转化成实际的产品能力？这篇《技术能力全景指南》就是围绕这四个问题展开的。",
-      "url": "https://waytoagi.feishu.cn/wiki/EWo0wdR00il5eJkTHC3clv9tnje?from=from_copylink"
     }
   ],
   "warning": null,
