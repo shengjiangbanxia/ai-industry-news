@@ -30382,5 +30382,12 @@
   "summary_zh|Nvidia’s GeForce 621.14 and 621.24 drivers reportedly rewrite a log file nonstop, writing gigabytes to SSDs every hour.": "据报道，Nvidia 的 GeForce 621.14 和 621.24 驱动程序会不间断地重写日志文件，每小时向 SSD 写入千兆字节。",
   "Nvidia GeForce driver bug reportedly hammers SSDs with up to 30GB of writes per hour": "据报道，Nvidia GeForce 驱动程序错误会导致 SSD 每小时写入高达 30GB",
   "summary_zh|Interim CEO Collete Kress reportedly offered staffers higher wages and more equity on an advanced schedule at the company's first all-hands after Jensen Huang resigned.": "据报道，黄仁勋辞职后，临时首席执行官科莱特·克雷斯在公司第一次全体员工大会上提前向员工提供了更高的工资和更多的股权。",
-  "Nvidia promises employee pay raises, equity before December to quell unrest in wake of Jensen Huang scandal": "Nvidia 承诺在 12 月之前提高员工工资和股权，以平息黄仁勋丑闻后的骚乱"
+  "Nvidia promises employee pay raises, equity before December to quell unrest in wake of Jensen Huang scandal": "Nvidia 承诺在 12 月之前提高员工工资和股权，以平息黄仁勋丑闻后的骚乱",
+  "[News] TSMC, Samsung Reportedly Pause China Consumer Chip Shipments Under New U.S. Rules; 16nm Orders Affected": "【新闻】据报道台积电、三星根据美国新规暂停中国消费芯片出货； 16纳米订单受影响",
+  "[News] Samsung Electronics Expands Silicon Photonics Portfolio Through Patent Acquisitions": "[新闻] 三星电子通过专利收购扩大硅光子产品组合",
+  "summary_zh|Get an RTX 5070 for just $839.99 — MSI GeForce RTX 5070 Ventus 2X OC 12 GB is currently on sale at Newegg": "只需 839.99 美元即可购买 RTX 5070 — MSI GeForce RTX 5070 Ventus 2X OC 12 GB 目前正在 Newegg 上发售",
+  "Get an RTX 5070 for just $839.99, a rare savings in the GPU wasteland": "只需 839.99 美元即可购买 RTX 5070，这是 GPU 荒地中难得的节省",
+  "summary_zh|Windows 0-day lets attackers run software by partially bypass the lock screen with just some keystrokes — even BitLocker-protected machines are seemingly vulnerable": "Windows 0day 让攻击者只需按几下按键即可部分绕过锁定屏幕来运行软件 - 即使受 BitLocker 保护的计算机也似乎很容易受到攻击",
+  "New Windows 11 lock screen zero-day unlocks BitLocker-protected PCs with just a few keystrokes": "新的 Windows 11 锁屏零日只需按几下按键即可解锁受 BitLocker 保护的电脑",
+  "summary_zh|IEA's report says that power production and distribution is barely keeping up with the rapid growth of AI data centers.": "IEA 的报告称，电力生产和分配几乎跟不上人工智能数据中心的快速增长。"
 }
