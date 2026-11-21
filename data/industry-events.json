@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T10:54:29+08:00",
+  "generated_at": "2026-11-21T21:33:04+08:00",
   "as_of": "2026-11-21",
   "timezone": "Asia/Shanghai",
   "lookahead_days": 180,
@@ -11,7 +11,7 @@
     1,
     0
   ],
-  "event_count": 18,
+  "event_count": 19,
   "confirmed_upcoming_count": 4,
   "alerts": [
     {
@@ -72,7 +72,7 @@
     }
   ],
   "source_check": {
-    "configured": 18,
+    "configured": 19,
     "checked": 18,
     "successful": 16,
     "structured_matches": 1,
@@ -738,6 +738,37 @@
         "agenda_published": false
       },
       "days_remaining": -60,
+      "reminder_band": null,
+      "within_lookahead": false,
+      "has_material_change": false
+    },
+    {
+      "id": "sc",
+      "name": "SC（超算大会）",
+      "category": "行业峰会",
+      "aliases": [
+        "SC26",
+        "Supercomputing",
+        "The International Conference for High Performance Computing, Networking, Storage, and Analysis",
+        "国际高性能计算、网络、存储与分析大会"
+      ],
+      "scope": [
+        "AI",
+        "Server",
+        "HPC",
+        "网络",
+        "存储"
+      ],
+      "priority": "core",
+      "cycle": 2026,
+      "status": "completed",
+      "start_date": "2026-11-15",
+      "end_date": "2026-11-20",
+      "location": "McCormick Place, Chicago, Illinois, USA",
+      "format": "in-person",
+      "source_url": "https://sc26.supercomputing.org/all-dates-deadlines/",
+      "source_title": "SC26 All Dates & Deadlines",
+      "days_remaining": -6,
       "reminder_band": null,
       "within_lookahead": false,
       "has_material_change": false
