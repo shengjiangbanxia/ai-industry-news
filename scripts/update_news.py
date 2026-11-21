@@ -3676,10 +3676,14 @@ def x_api_run_utc_hours() -> list[int]:
     return hours or [0]
 
 
-def x_api_should_run_now(now: datetime) -> bool:
-    """Gate paid X API reads to one half-hour window each day."""
+def x_api_should_run_now(now: datetime, paid_source_state: dict[str, Any] | None = None) -> bool:
+    """Gate paid reads by Beijing calendar day, or legacy explicit windows."""
     if env_flag("X_API_FORCE_RUN"):
         return True
+    if env_flag("X_API_FIRST_RUN_DAILY"):
+        last_run = parse_iso(str(paid_source_state_entry(paid_source_state, "x_api").get("last_run_at") or ""))
+        beijing = timezone(timedelta(hours=8))
+        return last_run is None or last_run.astimezone(beijing).date() < now.astimezone(beijing).date()
     run_hours = x_api_run_utc_hours()
     minute_max = max(0, min(env_int("X_API_RUN_UTC_MINUTE_MAX", 30), 59))
     utc_now = now.astimezone(UTC)
@@ -3783,11 +3787,13 @@ def fetch_x_api_recent_search(
 def maybe_fetch_x_api_updates(
     session: requests.Session,
     now: datetime,
+    paid_source_state: dict[str, Any] | None = None,
 ) -> tuple[list[RawItem], dict[str, Any]]:
     """Fetch X when a bearer token is present and ENABLED is not turned off, then
     only if scheduled and capped. The token is the primary switch; ENABLED is an
     optional kill switch (set it to 0 to force off)."""
     status = x_api_status_base(now)
+    status["first_run_daily"] = env_flag("X_API_FIRST_RUN_DAILY")
     if not status["enable_toggle"]:
         status["disabled_reason"] = "disabled_by_toggle"
         return [], status
@@ -3800,15 +3806,16 @@ def maybe_fetch_x_api_updates(
         status["error"] = "x_daily_post_limit_below_api_minimum"
         return [], status
 
-    if not x_api_should_run_now(now):
+    if not x_api_should_run_now(now, paid_source_state):
         status["skipped"] = True
-        status["skip_reason"] = "outside_x_api_daily_window"
+        status["skip_reason"] = "already_attempted_today" if env_flag("X_API_FIRST_RUN_DAILY") else "outside_x_api_daily_window"
         return [], status
 
     bearer_token = str(os.environ.get("X_BEARER_TOKEN") or os.environ.get("X_API_BEARER_TOKEN") or "").strip()
 
     query = str(os.environ.get("X_API_QUERY") or X_API_DEFAULT_QUERY).strip()
     base_url = str(os.environ.get("X_API_BASE_URL") or X_API_BASE_DEFAULT).strip()
+    status["attempted"] = True
     try:
         items = fetch_x_api_recent_search(
             session,
@@ -6533,7 +6540,9 @@ def main() -> int:
         after=iso(now - timedelta(hours=args.window_hours)),
         window_hours=args.window_hours,
     )
-    x_api_items, x_api_status = maybe_fetch_x_api_updates(session, now)
+    x_api_items, x_api_status = maybe_fetch_x_api_updates(session, now, paid_source_state)
+    update_paid_source_state(paid_source_state, "x_api", x_api_status, now)
+    sync_paid_source_status_timestamps(x_api_status, paid_source_state, "x_api")
     if x_api_status.get("enabled"):
         raw_items.extend(x_api_items)
         statuses.append(

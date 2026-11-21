@@ -104,7 +104,7 @@ SocialData 同时跑两路:① 中英关键词搜索发现新声音;② 一个�
 
 ## 7. X API(官方接口,默认未用)
 
-官方 X API 默认关闭(没配 `X_BEARER_TOKEN`)。参数:`X_API_DEFAULT_QUERY`(约 192 行)、`X_API_DEFAULT_MAX_RESULTS`(约 193 行)。个人部署使用 `X_API_RUN_UTC_HOURS=23`，每天北京时间 07:06 抓取一次；`X_API_RUN_UTC_MINUTE_MAX=30` 提供半小时触发窗口。普通信源每天北京时间 07:06、11:06、15:06、19:06 更新，夜间 23:00–07:00 不运行。
+X API workflow: `X_API_FIRST_RUN_DAILY=1` calls X on the first refresh of each Asia/Shanghai calendar day, with attempts persisted in `data/paid-source-state.json`. Manual `force_x_api` overrides this gate. Legacy hour/minute settings apply only when daily mode is off. Scheduled refreshes remain at 07:06, 11:06, 15:06, and 19:06 Asia/Shanghai.
 
 ---
 

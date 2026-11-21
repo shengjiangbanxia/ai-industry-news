@@ -14,7 +14,7 @@ on:
   workflow_dispatch:
     inputs:
       force_x_api:
-        description: "Force one paid X API refresh outside its normal time windows"
+        description: "Force one paid X API refresh even after its daily attempt"
         required: false
         default: false
         type: boolean
@@ -77,10 +77,9 @@ jobs:
           X_API_QUERY: ${{ vars.X_API_QUERY }}
           X_API_MAX_RESULTS: ${{ vars.X_API_MAX_RESULTS }}
           X_API_DAILY_POST_LIMIT: ${{ vars.X_API_DAILY_POST_LIMIT }}
-          # 23:00 UTC = 07:00 Asia/Shanghai. The first scheduled run at 07:06
-          # performs the single daily paid X read.
-          X_API_RUN_UTC_HOURS: '23'
-          X_API_RUN_UTC_MINUTE_MAX: 30
+          # First refresh each Beijing calendar day; queue delays cannot miss a window.
+          # Persisted paid-source-state.json prevents repeated paid reads that day.
+          X_API_FIRST_RUN_DAILY: '1'
           X_API_FORCE_RUN: ${{ inputs.force_x_api && '1' || '' }}
           SOCIALDATA_ENABLED: ${{ secrets.SOCIALDATA_ENABLED || vars.SOCIALDATA_ENABLED }}
           SOCIALDATA_API_KEY: ${{ secrets.SOCIALDATA_API_KEY }}
