@@ -1,0 +1,25 @@
+{
+  "event_id": "microsoft-ignite",
+  "cycle": 2026,
+  "name": "Microsoft Ignite",
+  "generated_at": "2026-11-22T08:45:00+00:00",
+  "method": "official_pages_no_llm",
+  "status": "ok",
+  "notice": "按官网栏目和关键词筛选；简介与摘录来自原文，未使用大模型分析。外链资料未下载或核验全文。",
+  "pages": [
+    {
+      "url": "https://ignite.microsoft.com/en-US/home",
+      "title": "Your home for Microsoft Ignite",
+      "description": "Microsoft Ignite delivers major announcements, deep technical learning, and direct access to the people shaping what’s coming next. Register, explore sessions and labs, and see who’s speaking.",
+      "category": "大会信息",
+      "published_at": null,
+      "excerpts": [],
+      "importance_score": 0,
+      "type": "page"
+    }
+  ],
+  "resources": [],
+  "errors": [],
+  "pages_attempted": 1,
+  "max_pages": 16
+}
