@@ -2161,6 +2161,9 @@ function industryEventDateLabel(event) {
 }
 
 function industryEventCountdown(event) {
+  if (event?.status === "completed") return { value: "已结束", label: "近 30 天" };
+  if (event?.ongoing) return { value: "进行中", label: "大会日程" };
+  if (event?.days_remaining == null) return { value: "待定", label: "等待官宣" };
   const days = Number(event?.days_remaining);
   if (!Number.isFinite(days)) return { value: "待定", label: "等待官宣" };
   if (days === 0) return { value: "今天", label: "正式开幕" };
@@ -2170,17 +2173,18 @@ function industryEventCountdown(event) {
 function renderIndustryEvents(payload) {
   if (!industryEventsWrapEl || !industryEventAlertEl || !industryEventsListEl) return;
   const events = Array.isArray(payload?.events) ? payload.events : [];
-  const upcoming = events.filter((event) => event.status === "confirmed" && Number.isFinite(Number(event.days_remaining)) && Number(event.days_remaining) >= 0);
-  if (!upcoming.length) {
+  const { upcoming, recent, pending } = EventCalendar.groupEvents(events);
+  if (!upcoming.length && !recent.length && !pending.length) {
     industryEventsWrapEl.hidden = true;
     return;
   }
   industryEventsWrapEl.hidden = false;
-  const lead = (Array.isArray(payload.alerts) && payload.alerts.length ? payload.alerts : upcoming)[0];
+  const lead = upcoming[0] || recent[0] || pending[0];
   const countdown = industryEventCountdown(lead);
   const sourceCheck = payload.source_check || {};
   const verifiedText = Number(sourceCheck.checked) > 0 ? ` · 官方核验 ${sourceCheck.successful || 0}/${sourceCheck.checked}` : "";
-  industryEventsMetaEl.textContent = `未来 ${payload.lookahead_days || 180} 天 · ${upcoming.filter((event) => event.within_lookahead).length} 场已确认${verifiedText}`;
+  const horizon = Number(payload.lookahead_days) || 180;
+  industryEventsMetaEl.textContent = `未来 ${horizon} 天 ${upcoming.filter((event) => event.days_remaining <= horizon).length} 场 · 近 30 天已结束 ${recent.length} 场${verifiedText}`;
 
   industryEventAlertEl.innerHTML = "";
   const card = document.createElement("article");
@@ -2212,11 +2216,28 @@ function renderIndustryEvents(payload) {
   link.target = "_blank";
   link.rel = "noopener noreferrer";
   link.textContent = "官方信息 →";
-  card.append(count, body, link);
+  const captureLink = (event) => {
+    const action = document.createElement("a");
+    action.className = "industry-event-capture";
+    action.href = `./event.html?id=${encodeURIComponent(event.id)}&cycle=${encodeURIComponent(event.cycle)}&capture=1`;
+    action.textContent = "抓取";
+    action.setAttribute("aria-label", `抓取 ${event.name} 官方资料`);
+    return action;
+  };
+  const actions = document.createElement("div");
+  actions.className = "industry-event-actions";
+  actions.append(link, captureLink(lead));
+  card.append(count, body, actions);
   industryEventAlertEl.appendChild(card);
 
   industryEventsListEl.innerHTML = "";
-  events.filter((event) => event.status !== "completed" && (event.priority === "core" || event.status === "confirmed")).forEach((event) => {
+  [["进行中与未来大会", upcoming], ["最近 30 天已结束", recent], ["等待官方公布", pending]].forEach(([label, group]) => {
+    if (!group.length) return;
+    const heading = document.createElement("h3");
+    heading.className = "industry-event-group-title";
+    heading.textContent = label;
+    industryEventsListEl.appendChild(heading);
+    group.forEach((event) => {
     const row = document.createElement("div");
     row.className = "industry-event-row";
     const main = document.createElement("div");
@@ -2228,14 +2249,21 @@ function renderIndustryEvents(payload) {
     main.append(name, detail);
     const days = document.createElement(event.source_url ? "a" : "span");
     days.className = "industry-event-row-days";
-    days.textContent = event.status === "unannounced" ? "未公布" : industryEventCountdown(event).value + (Number(event.days_remaining) === 0 ? "" : " 天");
+    days.textContent = event.days_remaining == null ? "未公布" : event.status === "completed" ? "已结束" : event.ongoing ? "进行中" : `${event.days_remaining} 天后`;
     if (event.source_url) {
       days.href = event.source_url;
       days.target = "_blank";
       days.rel = "noopener noreferrer";
     }
-    row.append(main, days);
+    const actions = document.createElement("div");
+    actions.className = "industry-event-actions";
+    const details = document.createElement("a");
+    details.href = `./event.html?id=${encodeURIComponent(event.id)}&cycle=${encodeURIComponent(event.cycle)}`;
+    details.textContent = "详情";
+    actions.append(days, details, captureLink(event));
+    row.append(main, actions);
     industryEventsListEl.appendChild(row);
+    });
   });
 }
 

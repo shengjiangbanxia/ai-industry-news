@@ -1,0 +1,229 @@
+{
+  "event_id": "sc",
+  "cycle": 2026,
+  "name": "SC（超算大会）",
+  "generated_at": "2026-11-21T14:04:05+00:00",
+  "method": "official_pages_no_llm",
+  "status": "ok",
+  "notice": "按官网栏目和关键词筛选；简介与摘录来自原文，未使用大模型分析。外链资料未下载或核验全文。",
+  "pages": [
+    {
+      "url": "https://sc26.supercomputing.org/proceedings/papers/index.html",
+      "title": "SC Technical Program Archives",
+      "description": "",
+      "category": "技术报告",
+      "published_at": null,
+      "excerpts": [
+        "3D Gaussian Splatting for Scientific Particle Data Compression and Rendering . Bo Jiang, Youyuan Liu, and Taolue Yang (Temple University); Sheng Di (Argonne National Laboratory); and Sian Jin (Temple University)",
+        "4D Parallelism Unlocks Exascale Bayesian Neural Networks for High-Fidelity Atmospheric Modeling . Deifilia Kieckhefen, Juan Pedro Gutiérrez Hermosillo Muriedas, and Lars Helge Heyen (Karlsruhe Institute of Technology (KIT)); Mathis Bode (Forschungzentrum Juelich); Iida Hakulinen (CSC - IT Center for Science); Andreas Herten and Chelsea Maria John (Forschungzentrum Juelich); Thorsten Kurth (NVIDIA Corporation); Anni Moisala (CSC - IT Center for Science); Asena Karolin Özdemir and Kaleb Phipps (Karlsruhe Institute of Technology (KIT)); Oskar Taubert (CSC - IT Center for Science); and Arvid Weyra…"
+      ],
+      "importance_score": 19,
+      "type": "page"
+    },
+    {
+      "url": "https://sc26.supercomputing.org/proceedings/eposters/index.html",
+      "title": "SC Technical Program Archives",
+      "description": "",
+      "category": "技术报告",
+      "published_at": null,
+      "excerpts": [
+        "From YAML to Insight: Interactive Visualization of hws Hardware Samples . Tim Thüring, Alexander Van Craen, and Dirk Pflüger (University of Stuttgart)",
+        "Interactive Knowledge Graph Supporting Self-Directed and Personalized High Performance Computing Education . Eva Fernandez Amez, Thomas Flynn, Mladen Ivkovic, Christopher Marcotte, and Tobias Weinzierl (Durham University)",
+        "OpenCosmo Visualization: In-Browser Exploration of Cosmological Particle Data . Idunnuoluwa A. Adeniji (University of Illinois Chicago, Argonne National Laboratory); Joseph Insley (Argonne National Laboratory); and Michael E. Papka (University of Illinois Chicago, Argonne National Laboratory)"
+      ],
+      "importance_score": 15,
+      "type": "page"
+    },
+    {
+      "url": "https://sc26.supercomputing.org/proceedings/posters/index.html",
+      "title": "SC Technical Program Archives",
+      "description": "",
+      "category": "技术报告",
+      "published_at": null,
+      "excerpts": [
+        "A-OASIS: Building an AI-Coupled Atmosphere-Ocean Foundation Model . Nia Maheshwari (University of Tennessee, Knoxville; Brookhaven National Laboratory); Guang Zhao (Brookhaven National Laboratory); Shuyan Ding and Zhengyu Liu (The Ohio State University); and Wei Xu (Brookhaven National Laboratory)",
+        "Accelerating Materials Discovery with ADAM: An AI Co-Pilot for Physical Experimentation . Anderson Borch (University of New Mexico, National Laboratory of the Rockies (NLR)) and Steven Spurgeon (National Laboratory of the Rockies (NLR), Colorado School of Mines)",
+        "Adaptive Error Quantization for Lossy Compression of Scientific Datasets . Samuel Quan and Jon Calhoun (Clemson University)"
+      ],
+      "importance_score": 15,
+      "type": "page"
+    },
+    {
+      "url": "https://sc26.supercomputing.org/proceedings/papers/paper_pages/pap599.html",
+      "title": "Arachne: Orchestrating Cascades for Efficient Text-to-Video Model Training",
+      "description": "",
+      "category": "技术报告",
+      "published_at": null,
+      "excerpts": [
+        "The rising demand for AI-generated videos is fueled by advances in large-scale text-to-video (T2V) models, trained on extensive datasets of video clips spanning diverse resolutions and durations. To address this data heterogeneity, current training methods often use a bucketing strategy that groups samples into discrete buckets for efficiency. However, this approach struggles to scale with compute and data volumes under static parallelism schemes, such as data and sequence parallelism, leading to significant workload imbalances and hardware under-utilization. In this paper, we present Arachne,…"
+      ],
+      "importance_score": 12,
+      "type": "page"
+    },
+    {
+      "url": "https://sc26.supercomputing.org/program/proceedings-archives/",
+      "title": "Proceedings & Archives",
+      "description": "Technical Program Publications acm opentoc Enables the download of SC26 Technical Papers content from the ACM Digital Library at no charge in perpetuity. (Available January 2027) PapersArchived in the ACM Digital Library and IEEE Xplore, members of SIGHPC",
+      "category": "技术报告",
+      "published_at": null,
+      "excerpts": [
+        "Proceedings Chair Swann Perarnau, Argonne National Laboratory (ANL), University of Chicago",
+        "Proceedings Vice Chair Hermes Senger, University of Sao Paulo, Brazil; University of São Paulo",
+        "Proceedings Vice Chair François Tessier, French Institute for Research in Computer Science and Automation (INRIA)"
+      ],
+      "importance_score": 11,
+      "type": "page"
+    },
+    {
+      "url": "https://sc26.supercomputing.org/proceedings/papers/paper_pages/gb101.html",
+      "title": "Architecture-Agnostic Exascale Star-by-Star Simulation of Our Galaxy",
+      "description": "",
+      "category": "技术报告",
+      "published_at": null,
+      "excerpts": [
+        "Resolving individual stars in simulations of the Milky Way (MW), where we live, is essential to understanding its formation and time evolution. Recent multi-wavelength, multi-modal observations have shown the detailed structures of the MW. Correspondingly, high-resolution simulations that resolve individual stars with multiphysics are required. Leveraging exascale systems, we present PHEASANT: star-by-star MW galaxy simulations including physics across multiple spatiotemporal scales with up to 5.4 trillion particles, ~10,000 times more particles than the state-of-the-art. On Aurora, our code p…"
+      ],
+      "importance_score": 9,
+      "type": "page"
+    },
+    {
+      "url": "https://sc26.supercomputing.org/proceedings/papers/paper_pages/gbv101.html",
+      "title": "4D Parallelism Unlocks Exascale Bayesian Neural Networks for High-Fidelity Atmospheric Modeling",
+      "description": "",
+      "category": "技术报告",
+      "published_at": null,
+      "excerpts": [
+        "We present BEAST, the first-ever Bayesian Swin Transformer for atmospheric forecasting on 0.25° global resolution. To overcome the associated computational bottlenecks, we devise an orthogonal 4D-parallelization scheme that introduces a unique domain-tensor-parallelism strategy and a novel uncertainty parallel method, enabling us to fully leverage GPU capacity and efficiently scale model training. For a 2.4-billion-parameter model, we achieve a peak performance of 3.96 EFLOP/s on 20,480 NVIDIA GH200 GPUs on the JUPITER supercomputer. We train BEAST as a 700-million-parameter model with 96 rand…"
+      ],
+      "importance_score": 9,
+      "type": "page"
+    },
+    {
+      "url": "https://sc26.supercomputing.org/program/hpc-unites-plenary/",
+      "title": "HPC Unites Plenary",
+      "description": "All registered attendees and exhibitors are welcomed at the opening plenary. Kick off your week of SC with a dose of inspiration.",
+      "category": "主旨演讲",
+      "published_at": null,
+      "excerpts": [
+        "Artificial intelligence is impacting all aspects of science. As the global scientific community embraces these tools and methods, we anticipate a potential acceleration of discovery in many areas. This prestigious international panel will discuss the implications for how people can successfully harness the immense potential of AI.",
+        "Keynote, Plenaries, Invited Speakers Co-Chair Martin Schulz, Technical University of Munich, Leibniz Supercomputing Centre (LRZ)",
+        "Keynote, Plenaries, Invited Speakers Co-Chair Brent Gorda, Quantum Motion"
+      ],
+      "importance_score": 9,
+      "type": "page"
+    },
+    {
+      "url": "https://sc26.supercomputing.org/program/keynote/",
+      "title": "Keynote",
+      "description": "Open to all registered attendees and exhibitors, the Keynote features a visionary thought leader from our community.",
+      "category": "主旨演讲",
+      "published_at": null,
+      "excerpts": [
+        "Open to all registered attendees and exhibitors, the Keynote features a visionary thought leader from our community.",
+        "SC26 Keynote Animashree Anandkumar of Caltech invites the HPC community to join her on a journey to explore AI’s next frontier: understanding the physical world to accelerate discovery. Learn more about Animashree and her many achievements below.",
+        "Keynote, Plenaries, Invited Speakers Co-Chair Martin Schulz, Technical University of Munich, Leibniz Supercomputing Centre (LRZ)"
+      ],
+      "importance_score": 9,
+      "type": "page"
+    },
+    {
+      "url": "https://sc26.supercomputing.org/media/newsletter-archive/",
+      "title": "Newsletter",
+      "description": "Sign up to receive the SC Newsletter in your inbox, or view newsletters in your browser, they're posted on the day of the send.",
+      "category": "官方发布",
+      "published_at": null,
+      "excerpts": [
+        "Sign up to receive the SC Newsletter in your inbox. Published on the second Thursday of the month, it’s a digest version of our monthly updates and blog posts. Each issue is archived here on the day of the send. Sign up below.",
+        "Newsletter sends increase to twice a month closer to the conference, or when we have something special to announce, like our keynote or invited speakers!",
+        "The SC Conference does not share or sell its email list. You may unsubscribe for the list at any time. When you register for SC you must opt in to receive communications."
+      ],
+      "importance_score": 7,
+      "type": "page"
+    },
+    {
+      "url": "https://sc26.supercomputing.org/program/papers/",
+      "title": "Papers",
+      "description": "Attend presentations of peer-reviewed technical papers on a wide range of topics over three inspiring days.",
+      "category": "技术报告",
+      "published_at": null,
+      "excerpts": [
+        "The SC Papers program is the leading venue for presenting high-quality original research, groundbreaking ideas, and compelling insights on current and future trends in high performance computing, networking, storage, and analysis. Attend presentations of peer-reviewed technical papers on a wide range of topics over three inspiring days.",
+        "Papers Co-Chair Hatem Ltaief, King Abdullah University of Science and Technology (KAUST)",
+        "Authors are required to complete and submit the paper checklist as part of the online paper submission form. This checklist is embedded within the form and must be filled out to ensure that all submission requirements are properly addressed."
+      ],
+      "importance_score": 7,
+      "type": "page"
+    },
+    {
+      "url": "https://sc26.supercomputing.org/program/papers/ad-ae-appendices/",
+      "title": "AD/AE Appendices",
+      "description": "AD Appendix The AD Appendix should contain the following two parts: Part 1: Overview of Contributions & Artifacts A. Paper’s Main Contributions Provide a list of paper’s contributions for which computational artifacts are created. B.",
+      "category": "技术报告",
+      "published_at": null,
+      "excerpts": [
+        "A LaTeX template for the AD/AE Appendix and further information can be found on GitHub.",
+        "Provide a list of paper’s contributions for which computational artifacts are created.",
+        "Provide a table with the relevant computational artifacts, highlight their relation to the contributions (from above) and point to the elements in the paper that will be reproduced (figures, tables)."
+      ],
+      "importance_score": 7,
+      "type": "page"
+    },
+    {
+      "url": "https://sc26.supercomputing.org/",
+      "title": "Navigating SC26: Know Before You Go",
+      "description": "The International Conference for High Performance Computing, Networking, Storage, and Analysis • 15–20 Nov 2026 • Chicago, IL",
+      "category": "大会信息",
+      "published_at": null,
+      "excerpts": [
+        "Print registration receipt or certificate of attendance until January 31, 2027",
+        "HPC Unites Navigating SC26: Know Before You Go For first-timers or returning attendees, get ready for SC26 with this collection of essential information and resources designed to make the conference experience even more rewarding. November 5, 2026",
+        "For first-timers or returning attendees, get ready for SC26 with this collection of essential information and resources designed to make the conference experience even more rewarding."
+      ],
+      "importance_score": 0,
+      "type": "page"
+    },
+    {
+      "url": "https://sc26.supercomputing.org/all-dates-deadlines/",
+      "title": "All Dates & Deadlines",
+      "description": "A consolidated list of all important dates and deadlines for submissions, applications, nominations, registration, housing, and exhibits.",
+      "category": "大会信息",
+      "published_at": null,
+      "excerpts": [
+        "24 JUL 2026 AE Appendix (Optional) Due/Badge Application (Mandatory) Due",
+        "ACM SIGHPC Educational Award for Outstanding Contribution to Computational Science Education",
+        "IEEE-CS TCHPC Award for Excellence in Early Career Researchers in High Performance Computing"
+      ],
+      "importance_score": 0,
+      "type": "page"
+    }
+  ],
+  "resources": [
+    {
+      "url": "https://youtu.be/fmaUQa3J1hw",
+      "title": "Take a Journey to SC26",
+      "type": "video",
+      "source_url": "https://sc26.supercomputing.org/"
+    },
+    {
+      "url": "https://www.youtube.com/user/SCconferenceseries",
+      "title": "/user/SCconferenceseries",
+      "type": "video",
+      "source_url": "https://sc26.supercomputing.org/"
+    },
+    {
+      "url": "https://sc26.supercomputing.org/proceedings/papers/paper_files/pap599s4-file2.pptx",
+      "title": "file",
+      "type": "slides",
+      "source_url": "https://sc26.supercomputing.org/proceedings/papers/paper_pages/pap599.html"
+    },
+    {
+      "url": "https://sc26.supercomputing.org/wp-content/uploads/2026/04/SC26-Tech-Papers-Webinar.pdf",
+      "title": "DOWNLOAD SLIDES (PDF)",
+      "type": "pdf",
+      "source_url": "https://sc26.supercomputing.org/program/papers/"
+    }
+  ],
+  "errors": [],
+  "pages_attempted": 16,
+  "max_pages": 16
+}

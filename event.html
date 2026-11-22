@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <title>大会官方资料 · AI Industry News Radar</title>
+    <link rel="icon" href="./assets/logo.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./assets/styles.css?v=event-materials-1121" />
+    <link rel="stylesheet" href="./assets/event.css?v=event-materials-1121" />
+    <script src="./assets/event.js?v=event-materials-1121" defer></script>
+  </head>
+  <body>
+    <main class="shell event-shell">
+      <nav class="event-nav" aria-label="导航"><a href="./index.html">返回新闻雷达</a><span>AI INDUSTRY NEWS RADAR</span></nav>
+      <header class="event-hero">
+        <p class="section-eyebrow">OFFICIAL EVENT MATERIALS</p>
+        <h1 id="eventTitle">大会官方资料</h1>
+        <p id="eventMeta">正在加载大会信息…</p>
+        <p>沿着官方来源，查看重要发布、技术资料与演讲。简介和摘录保留原文，可使用浏览器翻译。</p>
+        <div class="event-toolbar">
+          <a id="officialLink" hidden target="_blank" rel="noopener noreferrer">大会官网</a>
+          <button id="showCapture" class="industry-event-capture" type="button" disabled>抓取</button>
+          <button id="refreshMaterials" type="button">刷新资料</button>
+        </div>
+      </header>
+      <section id="capturePanel" class="event-panel" aria-labelledby="captureHeading" hidden>
+        <h2 id="captureHeading">抓取官方资料</h2>
+        <p>所有访客均可收集官网重要页面及视频、PDF 链接，无需登录，不调用大模型或付费搜索。6 小时内直接复用已有资料，进行中的任务由大家共享。</p>
+        <form id="captureForm">
+          <div class="event-form-row">
+            <button id="startCapture" class="industry-event-capture" type="submit">开始抓取</button>
+          </div>
+          <p class="event-secondary">同一 IP 每小时最多发起 3 次新任务，全站每天最多 12 次。已有资料始终可以阅读。</p>
+        </form>
+        <p id="captureStatus" role="status" aria-live="polite"></p>
+        <a id="runLink" target="_blank" rel="noopener noreferrer" hidden>查看任务进度</a>
+        <div id="manualCapture" hidden>
+          <p>在 GitHub 登录仓库管理员账号，点击 Run workflow 并填写 <code id="manualInputs"></code>。任务完成后回到此页刷新资料。</p>
+          <a class="industry-event-capture" href="https://github.com/shengjiangbanxia/ai-industry-news/actions/workflows/collect-event-materials.yml" target="_blank" rel="noopener noreferrer">前往 GitHub 启动抓取</a>
+        </div>
+      </section>
+      <section class="event-results" aria-labelledby="materialsHeading">
+        <div class="event-results-head"><h2 id="materialsHeading">官方资料</h2><span id="materialsMeta"></span></div>
+        <p id="materialsStatus" role="status">正在检查已有资料…</p>
+        <p id="materialsNotice" class="event-secondary"></p>
+        <div id="materialPages"></div>
+        <section id="resourceSection" hidden><h2>视频与下载资料</h2><ul id="resourceList" class="event-resources"></ul></section>
+        <details id="errorSection" hidden><summary>部分来源未能读取</summary><ul id="errorList"></ul></details>
+      </section>
+    </main>
+  </body>
+</html>

@@ -34,7 +34,7 @@
     <link rel="apple-touch-icon" href="./assets/icons/apple-touch-icon.png" sizes="180x180" />
     <link rel="manifest" href="./site.webmanifest" />
     <script src="./assets/view-mode.js?v=dual-view-0713c" data-root="./"></script>
-    <link rel="stylesheet" href="./assets/styles.css?v=events-0719a" />
+    <link rel="stylesheet" href="./assets/styles.css?v=event-materials-1121" />
     <link rel="stylesheet" href="./assets/view-switch.css?v=dual-view-0713b" />
   </head>
   <body>
@@ -117,17 +117,17 @@
           </div>
       </details>
 
-      <section class="industry-events-wrap" id="industryEventsWrap" aria-label="重要行业大会预警" hidden>
+      <section class="industry-events-wrap" id="industryEventsWrap" aria-label="重要行业大会与近期回顾" hidden>
         <div class="industry-events-head">
           <div>
             <p class="section-eyebrow">INDUSTRY EVENTS</p>
-            <h2>重要行业大会预警</h2>
+            <h2>重要行业大会</h2>
           </div>
           <span id="industryEventsMeta">加载中...</span>
         </div>
         <div id="industryEventAlert"></div>
-        <details class="industry-events-calendar">
-          <summary>查看未来事件日历</summary>
+        <details class="industry-events-calendar" open>
+          <summary>大会日历与近期回顾</summary>
           <div id="industryEventsList"></div>
         </details>
       </section>
@@ -203,6 +203,7 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" integrity="sha384-HOvlOYPIs/zjoIkWUGXkVmXsjr8GuZLV+Q+rcPwmJOVZVpvTSXQChiN4t9Euv9Vc" crossorigin="anonymous" defer></script>
     <script src="./assets/motion.js?v=aihot-0715b" defer></script>
     <script src="./assets/industry-taxonomy.js?v=industry-taxonomy-0720a" defer></script>
-    <script src="./assets/app.js?v=industry-taxonomy-0720a" defer></script>
+    <script src="./assets/event-calendar.js?v=event-materials-1121" defer></script>
+    <script src="./assets/app.js?v=event-materials-1121" defer></script>
   </body>
 </html>

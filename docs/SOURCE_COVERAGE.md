@@ -37,6 +37,11 @@ private forks because they need credentials, bridges, or ongoing maintenance.
 
 ## Supported Source Types
 
+The industry-event calendar also supports an on-demand official-materials collector.
+It reads only configured official hosts, respects robots.txt, and publishes short
+attributed excerpts and document/video links without an LLM or paid search API.
+See [event materials setup](EVENT_MATERIALS.md) for the public trigger, shared quotas and limits.
+
 | Source type | Current support | Recommended path | Notes |
 | --- | --- | --- | --- |
 | Official RSS / Atom | Supported through OPML | Add to `feeds/follow.opml` locally, or `FOLLOW_OPML_B64` in GitHub Actions | Best default for personal customization. |

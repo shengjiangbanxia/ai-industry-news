@@ -1,0 +1,46 @@
+name: Collect Event Materials
+run-name: event-capture:${{ inputs.event_id }}:${{ inputs.cycle }}
+on:
+  workflow_dispatch:
+    inputs:
+      event_id:
+        description: "Event id from config/industry-events.json (e.g. sc)"
+        required: true
+        type: string
+      cycle:
+        description: "Event year (e.g. 2026)"
+        required: true
+        type: string
+permissions:
+  contents: write
+concurrency:
+  group: event-capture-${{ github.ref }}-${{ inputs.event_id }}-${{ inputs.cycle }}
+  cancel-in-progress: false
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Collect official pages without a model
+        env:
+          EVENT_ID: ${{ inputs.event_id }}
+          EVENT_CYCLE: ${{ inputs.cycle }}
+        run: python scripts/collect_event_materials.py --event-id "$EVENT_ID" --cycle "$EVENT_CYCLE"
+      - name: Publish collected material
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/event-materials/
+          git diff --cached --quiet && exit 0
+          git commit -m "chore: collect official event materials"
+          for attempt in 1 2 3; do
+            git pull --rebase origin "$GITHUB_REF_NAME" || exit 1
+            git push origin "HEAD:$GITHUB_REF_NAME" && exit 0
+          done
+          exit 1
